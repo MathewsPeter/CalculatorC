@@ -1,2 +1,10 @@
-calc: main.c calc.c
-  gcc -o calc main.c calc.c -I.
+CC=gcc
+CFLAGS=-I.
+
+DEPS = *.h
+
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
+
+a.out: main.o calc.o
+	$(CC) -o a.out main.o calc.o
