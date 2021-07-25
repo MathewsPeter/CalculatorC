@@ -7,4 +7,4 @@ DEPS = *.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 a.out: main.o calc.o
-	$(CC) -o a.out main.o calc.o
+	$(CC) -o a.out main.o calc.o $(CFLAGS)
