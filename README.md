@@ -1,3 +1,4 @@
 # CalculatorC
 Arithmetic Calculator in C.
-Download all files and execute the run.sh file in linux.
+Run using github actions or by downloading all files.
+Execute the run.sh file in linux or use make
