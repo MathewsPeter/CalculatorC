@@ -12,4 +12,3 @@ clean:
 	rm -f main.o
 	rm -f calc.o
 	rm -f a.out
-	clear
