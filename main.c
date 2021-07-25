@@ -6,27 +6,27 @@
  */
  
 #include <stdio.h>
+#include<assert.h>
 #include "calc.h"
+
+#define UNITTESTMODE 1
 
 int main(void);
 int main(void)
 {
-	float a, b;
-	char op;
-	printf("Input first number: ");	scanf("%f", &a);
-	printf("Input operator: ");	scanf("%s", &op);
-	printf("Input second number: ");	scanf("%f", &b);
+	#ifndef UNITTESTMODE
+	int a, b;char op;
+	printf("Input first number: ");	scanf("%d", &a);
+	printf("Input operator: ");	scanf("%c", &op);
+	printf("Input second number: ");scanf("%d", &b);
 	
-	switch(op)
-	{
-		case '+': calcsum(a,b); break;
-		case '-': calcdiff(a,b); break;
-		case '*': calcprod(a,b); break;
-		case '/': calcdiv(a,b); break;
-		case '^': calcpow(a,b); break;
-		default: printf("Supported operations are + - * / ^\n");
-	}
-	printf("\n");
+	printf("%d\n",calcmain(a,b,op));
+	#else
+	assert( calcmain(1,2,'+') == 3);
+	assert( calcmain(-10,2,'*') == -20);
+	assert( calcmain(40,3,'/') == 13);
+	#endif
+
 	return 0;
 }
 	
