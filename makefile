@@ -1,10 +1,15 @@
-CC=gcc
-CFLAGS=-I -lm.
 
-DEPS = *.h
+run:compile
+	chmod a+x calc
+	./calc
 
-%.o: %.c $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
+compile: clean
+	gcc -Wall -g -c main.c
+	gcc -Wall -g -c calc.c
+	gcc -o calc main.o calc.o -lm
 
-a.out: main.o calc.o
-	$(CC) -o a.out main.o calc.o $(CFLAGS)
+clean:
+	rm -f main.o
+	rm -f calc.o
+	rm -f a.out
+	clear
