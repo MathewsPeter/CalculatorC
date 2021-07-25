@@ -1,26 +1,2 @@
-# Prerequisites
-*.d
-
-# Object files
+calc
 *.o
-*.ko
-*.obj
-*.elf
-
-# Linker output
-*.ilk
-*.map
-*.exp
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-
-# Executables
-*.out

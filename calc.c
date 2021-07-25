@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <math.h> 
 
-int calcmain(int,int,char); 
+int calcmain(int,char, int); 
 int calcmain(int a, char op, int b)
 {
  switch(op)
@@ -19,4 +19,5 @@ int calcmain(int a, char op, int b)
   case '/': return (a/b); break;
   default: printf("Supported operations are + - * / \n");
   }
+return 0;
 }
